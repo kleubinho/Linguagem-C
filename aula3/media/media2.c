@@ -21,6 +21,12 @@ int main(int argc, char *argv[]) {
 	media = ( nota1 + nota2) / 2;
 	//saída
 	printf("Resultado: %.1f\n", media);
+	//estrutura de controle para determinar a aprovação
+	if (media < 5){
+		printf("REPROVADO\n");
+	}else {
+		printf("APROVADO");
+	}
 	system("pause");
 	return 0;
 }

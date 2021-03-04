@@ -32,17 +32,13 @@ int main(int argc, char *argv[]) {
 	char aluno[50];
 	char sexo;
 	int idade;
-	float  nota1, nota2, nota3, nota4, media, peso, altura;
+	float  nota1, nota2, nota3, nota4, media;
 	printf("Nome do aluno: ");
 	gets(aluno);
 	printf("Sexo(M/F): ");
 	scanf("%c", &sexo);
 	printf("idade: ");
 	scanf("%d", &idade);
-	printf("Peso(kg): ");
-	scanf("%f", &peso);
-	printf("altura(m): ");
-	scanf("%f", &altura);
 	printf("____________________________\n");
 	
 	system("pause");
@@ -59,11 +55,17 @@ int main(int argc, char *argv[]) {
 	scanf("%f", &nota3);
 	printf("Digite a nota 4: ");
 	scanf("%f", &nota4);
+	
 	printf("____________________________\n");
 	//processamento 
 	media = (nota1 + nota2 + nota3 + nota4) / 4;
 	//saida
 	printf("Média : %.1f\n", media);
+	if (media <6){
+		printf("REPROVADO\n");
+	} else {
+		printf("APROVADO\n");
+	}
 	
 	
 	return 0;
